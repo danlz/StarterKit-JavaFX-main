@@ -333,38 +333,32 @@ public class PersonSearchController {
 				/*
 				 * Get the data.
 				 */
-				return dataProvider.findPersons( //
+				Collection<PersonVO> result = dataProvider.findPersons( //
 						model.getName(), //
 						model.getSex().toSexVO());
-			}
-		};
 
-		/*
-		 * Monitor the "state" property to get informed when the background task
-		 * finishes.
-		 */
-		backgroundTask.stateProperty().addListener(new ChangeListener<Worker.State>() {
+				return result;
+			}
 
 			/**
-			 * This method will be executed in the JavaFX Application Thread.
+			 * This method will be executed in the JavaFX Application Thread
+			 * when the task finishes.
 			 */
 			@Override
-			public void changed(ObservableValue<? extends State> observable, State oldValue, State newValue) {
-				if (newValue == State.SUCCEEDED) {
-					LOG.debug("changed() called");
+			protected void succeeded() {
+				LOG.debug("succeeded() called");
 
-					/*
-					 * Copy the result to model.
-					 */
-					model.setResult(new ArrayList<PersonVO>(backgroundTask.getValue()));
+				/*
+				 * Copy the result to model.
+				 */
+				model.setResult(new ArrayList<PersonVO>(getValue()));
 
-					/*
-					 * Reset sorting in table.
-					 */
-					resultTable.getSortOrder().clear();
-				}
+				/*
+				 * Reset sorting in table.
+				 */
+				resultTable.getSortOrder().clear();
 			}
-		});
+		};
 
 		/*
 		 * Start the background task. In real life projects some framework
