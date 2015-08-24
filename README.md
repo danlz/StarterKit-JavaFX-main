@@ -1,3 +1,3 @@
 # StarterKit-JavaFX-main
 
-Template project for the StarterKit-JavaFX training.
+Template repository for the StarterKit-JavaFX training.
