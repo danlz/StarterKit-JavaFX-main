@@ -1,0 +1,82 @@
+.root {
+	/* Define aliases for colors. */
+	-ps-base-color: darkgreen;
+	/* derive() changes brightness of a color. */
+	-ps-control-background-color: derive(-ps-base-color, 120.0%);
+	-ps-control-foreground-color: derive(-ps-base-color, 60.0%);
+	-ps-text-color: white;
+
+	-fx-background-color: -ps-base-color;
+}
+
+.label {
+	-fx-text-fill: -ps-text-color;
+}
+
+.text-field, .table-view {
+	-fx-background-color: -ps-control-background-color;
+}
+
+.button {
+	-fx-background-color: -ps-control-foreground-color;
+	-fx-text-fill: -ps-text-color;
+}
+
+.combo-box {
+	-fx-background-color: -ps-control-foreground-color;
+}
+
+.combo-box .list-cell {
+	-fx-text-fill: -ps-text-color;
+}
+
+.combo-box-popup .list-view .list-cell {
+	-fx-text-fill: -ps-text-color;
+	-fx-background-color: -ps-control-background-color;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+	-fx-text-fill: -ps-text-color;
+	-fx-background-color: -ps-control-foreground-color;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+	-fx-text-fill: -ps-text-color;
+	-fx-background-color: derive(-ps-control-foreground-color, 40.0%);
+}
+
+.table-view .table-cell {
+	-fx-text-fill: -ps-text-color;
+}
+
+.table-view .table-row-cell {
+	-fx-background-color: -ps-control-background-color;
+}
+
+.table-view .table-row:selected {
+	-fx-background-color: red;
+}
+
+.table-view .table-row-cell:selected {
+	-fx-background-color: derive(-ps-control-foreground-color, 40.0%);
+}
+
+.table-view .column-header, .table-view .filler {
+	-fx-background-color: -ps-control-foreground-color;
+}
+
+.table-view .column-drag-header {
+	-fx-background-color: derive(-ps-control-foreground-color, 40.0%);
+}
+
+.table-view .scroll-bar {
+	-fx-background-color: -ps-control-background-color;
+}
+
+.table-view .scroll-bar .thumb {
+	-fx-background-color: -ps-control-foreground-color;
+}
+
+.table-view .scroll-bar > .increment-button, .table-view .scroll-bar > .decrement-button {
+	-fx-background-color: -ps-control-background-color;
+}

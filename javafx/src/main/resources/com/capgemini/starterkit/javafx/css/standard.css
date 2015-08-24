@@ -1,0 +1,26 @@
+
+/* defined colors */
+
+
+/* Root of the scene */
+.root {
+}
+
+
+/* Select elements by their CSS class ("styleClass" attribute) */
+.formTitle {
+	-fx-font-size: 25.0px;
+	-fx-font-weight: bold;
+}
+
+
+/* Select element by its "fx:id" attribute */
+#resultTable #birthDateColumn {
+	-fx-alignment: center-right;
+}
+
+/* Select using the "selected" pseudo-selector */
+.table-view .table-row-cell:selected {
+	-fx-font-weight: bold;
+	-fx-font-size: 130.0%;
+}
