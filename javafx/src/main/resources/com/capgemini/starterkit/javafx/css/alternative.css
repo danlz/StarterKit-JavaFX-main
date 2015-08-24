@@ -53,10 +53,6 @@
 	-fx-background-color: -ps-control-background-color;
 }
 
-.table-view .table-row:selected {
-	-fx-background-color: red;
-}
-
 .table-view .table-row-cell:selected {
 	-fx-background-color: derive(-ps-control-foreground-color, 40.0%);
 }
