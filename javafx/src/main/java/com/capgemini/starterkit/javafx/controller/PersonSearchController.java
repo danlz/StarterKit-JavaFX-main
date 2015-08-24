@@ -151,9 +151,8 @@ public class PersonSearchController {
 		/*
 		 * Add items to the list in combobox.
 		 */
-		sexField.getItems().add(Sex.ANY);
-		for (SexVO sex : SexVO.values()) {
-			sexField.getItems().add(Sex.fromSexVO(sex));
+		for (Sex sex : Sex.values()) {
+			sexField.getItems().add(sex);
 		}
 
 		/*
