@@ -60,7 +60,7 @@ public class PersonSearchController {
 	 * </p>
 	 */
 	@FXML
-	ResourceBundle resources;
+	private ResourceBundle resources;
 
 	/**
 	 * <p>
@@ -68,28 +68,28 @@ public class PersonSearchController {
 	 * </p>
 	 */
 	@FXML
-	URL location;
+	private URL location;
 
 	@FXML
-	TextField nameField;
+	private TextField nameField;
 
 	@FXML
-	ComboBox<Sex> sexField;
+	private ComboBox<Sex> sexField;
 
 	@FXML
-	Button searchButton;
+	private Button searchButton;
 
 	@FXML
-	TableView<PersonVO> resultTable;
+	private TableView<PersonVO> resultTable;
 
 	@FXML
-	TableColumn<PersonVO, String> nameColumn;
+	private TableColumn<PersonVO, String> nameColumn;
 
 	@FXML
-	TableColumn<PersonVO, String> sexColumn;
+	private TableColumn<PersonVO, String> sexColumn;
 
 	@FXML
-	TableColumn<PersonVO, LocalDate> birthDateColumn;
+	private TableColumn<PersonVO, LocalDate> birthDateColumn;
 
 	private final DataProvider dataProvider = DataProvider.INSTANCE;
 
@@ -273,7 +273,7 @@ public class PersonSearchController {
 	 *            {@link ActionEvent} holding information about this event
 	 */
 	@FXML
-	public void searchButtonAction(ActionEvent event) {
+	private void searchButtonAction(ActionEvent event) {
 		LOG.debug("'Search' button clicked");
 
 		// searchButtonActionVersion1();
