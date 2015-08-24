@@ -168,7 +168,8 @@ public class PersonSearchController {
 						if (empty) {
 							return;
 						}
-						setText(resources.getString("sex." + item.name()));
+						String text = getInternationalizedText(item);
+						setText(text);
 					}
 				};
 			}
@@ -181,7 +182,7 @@ public class PersonSearchController {
 
 			@Override
 			public String toString(Sex object) {
-				return resources.getString("sex." + object.name());
+				return getInternationalizedText(object);
 			}
 
 			@Override
@@ -207,11 +208,8 @@ public class PersonSearchController {
 					@Override
 					public ObservableValue<String> call(CellDataFeatures<PersonVO, String> param) {
 						SexVO sex = param.getValue().getSex();
-						/*
-						 * Get localized string for given SexVO.
-						 */
-						String str = resources.getString("sex." + sex.name());
-						return new ReadOnlyStringWrapper(str);
+						String text = getInternationalizedText(Sex.fromSexVO(sex));
+						return new ReadOnlyStringWrapper(text);
 					}
 				});
 		birthDateColumn
@@ -260,6 +258,17 @@ public class PersonSearchController {
 				new Thread(backgroundTask).start();
 			}
 		});
+	}
+
+	/**
+	 * Gets an internationalized text for {@link Sex} value.
+	 *
+	 * @param sex
+	 *            sex
+	 * @return text
+	 */
+	private String getInternationalizedText(Sex sex) {
+		return resources.getString("sex." + sex.name());
 	}
 
 	/**
