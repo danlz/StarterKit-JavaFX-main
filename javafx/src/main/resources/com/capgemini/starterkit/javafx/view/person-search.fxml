@@ -21,7 +21,7 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-      <Label text="%label.name"/>
+      <Label text="%label.name" />
       <TextField fx:id="nameField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
       <Label text="%label.sex" GridPane.rowIndex="1" />
       <ComboBox fx:id="sexField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
