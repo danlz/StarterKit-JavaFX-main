@@ -1,10 +1,11 @@
 .root {
 	/* Define aliases for colors. */
 	-ps-base-color: darkgreen;
-	/* derive() changes brightness of a color. */
+	-ps-text-color: white;
+
+	/* The derive() function changes brightness of a color. */
 	-ps-control-background-color: derive(-ps-base-color, 120.0%);
 	-ps-control-foreground-color: derive(-ps-base-color, 60.0%);
-	-ps-text-color: white;
 
 	-fx-background-color: -ps-base-color;
 }

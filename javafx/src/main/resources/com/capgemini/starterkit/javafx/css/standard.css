@@ -1,4 +1,4 @@
-/* Root of the scene */
+/* Root of the object tree */
 .root {
 }
 
@@ -14,6 +14,7 @@
 #resultTable #birthDateColumn {
 	-fx-alignment: center-right;
 }
+
 
 /* Select using the "selected" pseudo-selector */
 .table-view .table-row-cell:selected {

@@ -137,7 +137,7 @@ public class PersonSearchController {
 		/*
 		 * This works also, because we are using bidirectional binding.
 		 */
-		// sexField.setValue(SexModel.ANY);
+		// sexField.setValue(Sex.ANY);
 
 		/*
 		 * Make the Search button inactive when the Name field is empty.
@@ -147,7 +147,7 @@ public class PersonSearchController {
 
 	private void initializeSexField() {
 		/*
-		 * Add items to the list in combobox.
+		 * Add items to the list in combo box.
 		 */
 		for (Sex sex : Sex.values()) {
 			sexField.getItems().add(sex);
@@ -188,7 +188,7 @@ public class PersonSearchController {
 			@Override
 			public Sex fromString(String string) {
 				/*
-				 * Not used, because ComboBox is not editable.
+				 * Not used, because combo box is not editable.
 				 */
 				return null;
 			}
@@ -234,12 +234,12 @@ public class PersonSearchController {
 		});
 
 		/*
-		 * Show specific text for empty table.
+		 * Show specific text for an empty table.
 		 */
 		resultTable.setPlaceholder(new Label(resources.getString("table.emptyText")));
 
 		/*
-		 * When table row gets select say given person name.
+		 * When table row gets selected say given person name.
 		 */
 		resultTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<PersonVO>() {
 
@@ -261,7 +261,7 @@ public class PersonSearchController {
 	}
 
 	/**
-	 * Gets an internationalized text for {@link Sex} value.
+	 * Gets an internationalized text for given {@link Sex} value.
 	 *
 	 * @param sex
 	 *            sex
