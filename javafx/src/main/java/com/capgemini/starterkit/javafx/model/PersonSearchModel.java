@@ -61,4 +61,9 @@ public class PersonSearchModel {
 		return result;
 	}
 
+	@Override
+	public String toString() {
+		return "PersonSearchModel [name=" + name + ", sex=" + sex + ", result=" + result + "]";
+	}
+
 }
