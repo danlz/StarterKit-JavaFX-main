@@ -14,7 +14,7 @@ import com.capgemini.starterkit.javafx.controls.LocalDateTableCell;
 import com.capgemini.starterkit.javafx.dataprovider.DataProvider;
 import com.capgemini.starterkit.javafx.dataprovider.data.PersonVO;
 import com.capgemini.starterkit.javafx.dataprovider.data.SexVO;
-import com.capgemini.starterkit.javafx.model.PersonSearchModel;
+import com.capgemini.starterkit.javafx.model.PersonSearch;
 import com.capgemini.starterkit.javafx.model.Sex;
 import com.capgemini.starterkit.javafx.texttospeech.Speaker;
 
@@ -93,7 +93,7 @@ public class PersonSearchController {
 
 	private final Speaker speaker = Speaker.INSTANCE;
 
-	private final PersonSearchModel model = new PersonSearchModel();
+	private final PersonSearch model = new PersonSearch();
 
 	/**
 	 * The JavaFX runtime instantiates this controller.
