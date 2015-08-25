@@ -18,7 +18,7 @@ import javafx.collections.FXCollections;
  *
  * @author Leszek
  */
-public class PersonSearchModel {
+public class PersonSearch {
 
 	private final StringProperty name = new SimpleStringProperty();
 	private final ObjectProperty<Sex> sex = new SimpleObjectProperty<>();
@@ -63,7 +63,7 @@ public class PersonSearchModel {
 
 	@Override
 	public String toString() {
-		return "PersonSearchModel [name=" + name + ", sex=" + sex + ", result=" + result + "]";
+		return "PersonSearch [name=" + name + ", sex=" + sex + ", result=" + result + "]";
 	}
 
 }
