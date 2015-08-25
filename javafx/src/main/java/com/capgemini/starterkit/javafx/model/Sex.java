@@ -9,7 +9,7 @@ import com.capgemini.starterkit.javafx.dataprovider.data.SexVO;
  */
 public enum Sex {
 
-	FEMALE, MALE, ANY;
+	ANY, FEMALE, MALE;
 
 	/**
 	 * Converts {@link SexVO} to corresponding {@link Sex}.
