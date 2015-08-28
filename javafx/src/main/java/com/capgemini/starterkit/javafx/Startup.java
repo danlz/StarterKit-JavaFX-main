@@ -41,7 +41,7 @@ public class Startup extends Application {
 		 */
 		Parent root = FXMLLoader.load(
 				getClass().getResource("/com/capgemini/starterkit/javafx/view/person-search.fxml"), //
-				ResourceBundle.getBundle("com/capgemini/starterkit/javafx/bundle/bundle"));
+				ResourceBundle.getBundle("com/capgemini/starterkit/javafx/bundle/base"));
 
 		Scene scene = new Scene(root);
 
