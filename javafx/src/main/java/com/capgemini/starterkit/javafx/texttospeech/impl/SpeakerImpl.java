@@ -12,8 +12,10 @@ import com.capgemini.starterkit.javafx.texttospeech.Speaker;
 import javazoom.jl.player.Player;
 
 /**
- * Uses Google Translate to transform text to speech. It downloads the resulting
- * MP3 on the fly.
+ * Uses Google Translate to transform text to speech.
+ * <p>
+ * This class calls Google server and plays the MP3 from returned stream.
+ * </p>
  *
  * @author Leszek
  */

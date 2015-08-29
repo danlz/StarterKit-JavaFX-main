@@ -3,7 +3,7 @@ package com.capgemini.starterkit.javafx.model;
 import com.capgemini.starterkit.javafx.dataprovider.data.SexVO;
 
 /**
- * Representation of sex values used in GUI.
+ * Sex values used in GUI.
  *
  * @author Leszek
  */
