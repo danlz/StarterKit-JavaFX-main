@@ -1,9 +1,9 @@
 .root {
-	/* Define aliases for colors. */
+	/* Define aliases for colors */
 	-ps-base-color: darkgreen;
 	-ps-text-color: white;
 
-	/* The derive() function changes brightness of a color. */
+	/* The derive() function changes brightness of a color */
 	-ps-control-background-color: derive(-ps-base-color, 120.0%);
 	-ps-control-foreground-color: derive(-ps-base-color, 60.0%);
 

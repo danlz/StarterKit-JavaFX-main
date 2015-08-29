@@ -12,8 +12,8 @@ import com.capgemini.starterkit.javafx.dataprovider.data.PersonVO;
 import com.capgemini.starterkit.javafx.dataprovider.data.SexVO;
 
 /**
- * Provides data. Data is stored locally in class. Additionally call delay is
- * simulated.
+ * Provides data. Data is stored locally in this object. Additionally a call
+ * delay is simulated.
  *
  * @author Leszek
  */

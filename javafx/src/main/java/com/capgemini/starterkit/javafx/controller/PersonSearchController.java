@@ -239,7 +239,7 @@ public class PersonSearchController {
 		resultTable.setPlaceholder(new Label(resources.getString("table.emptyText")));
 
 		/*
-		 * When table row gets selected say given person name.
+		 * When table's row gets selected say given person's name.
 		 */
 		resultTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<PersonVO>() {
 

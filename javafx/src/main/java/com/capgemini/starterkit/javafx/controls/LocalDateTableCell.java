@@ -39,12 +39,12 @@ public class LocalDateTableCell<T> extends TableCell<T, LocalDate> {
 		}
 
 		/*
-		 * Format the date according to given formatter.
+		 * Format the date according to given format.
 		 */
 		String str = item.format(dateFormat);
 
 		/*
-		 * Set the value in table cell.
+		 * Set the value in this table cell.
 		 */
 		setText(str);
 
@@ -63,8 +63,7 @@ public class LocalDateTableCell<T> extends TableCell<T, LocalDate> {
 		}
 
 		/*
-		 * Define alignment for text in cell. Alternative (better) solution for
-		 * setting alignment in standard.css.
+		 * Define alignment for text in this cell. Better way to do it is CSS.
 		 */
 		// setAlignment(Pos.CENTER_RIGHT);
 	}
