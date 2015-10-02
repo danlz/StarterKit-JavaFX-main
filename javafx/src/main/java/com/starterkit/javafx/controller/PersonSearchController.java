@@ -1,4 +1,4 @@
-package com.capgemini.starterkit.javafx.controller;
+package com.starterkit.javafx.controller;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -10,13 +10,13 @@ import java.util.ResourceBundle;
 
 import org.apache.log4j.Logger;
 
-import com.capgemini.starterkit.javafx.controls.LocalDateTableCell;
-import com.capgemini.starterkit.javafx.dataprovider.DataProvider;
-import com.capgemini.starterkit.javafx.dataprovider.data.PersonVO;
-import com.capgemini.starterkit.javafx.dataprovider.data.SexVO;
-import com.capgemini.starterkit.javafx.model.PersonSearch;
-import com.capgemini.starterkit.javafx.model.Sex;
-import com.capgemini.starterkit.javafx.texttospeech.Speaker;
+import com.starterkit.javafx.controls.LocalDateTableCell;
+import com.starterkit.javafx.dataprovider.DataProvider;
+import com.starterkit.javafx.dataprovider.data.PersonVO;
+import com.starterkit.javafx.dataprovider.data.SexVO;
+import com.starterkit.javafx.model.PersonSearch;
+import com.starterkit.javafx.model.Sex;
+import com.starterkit.javafx.textospeech.Speaker;
 
 import javafx.application.Platform;
 import javafx.beans.property.ReadOnlyObjectWrapper;

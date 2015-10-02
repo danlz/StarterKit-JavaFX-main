@@ -1,9 +1,9 @@
-package com.capgemini.starterkit.javafx.model;
+package com.starterkit.javafx.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.capgemini.starterkit.javafx.dataprovider.data.PersonVO;
+import com.starterkit.javafx.dataprovider.data.PersonVO;
 
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.ObjectProperty;
