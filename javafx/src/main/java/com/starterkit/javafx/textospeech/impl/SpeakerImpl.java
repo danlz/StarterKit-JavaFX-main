@@ -1,4 +1,4 @@
-package com.capgemini.starterkit.javafx.texttospeech.impl;
+package com.starterkit.javafx.textospeech.impl;
 
 import java.net.URL;
 import java.net.URLConnection;
@@ -7,7 +7,7 @@ import java.util.Locale;
 
 import org.apache.log4j.Logger;
 
-import com.capgemini.starterkit.javafx.texttospeech.Speaker;
+import com.starterkit.javafx.textospeech.Speaker;
 
 import javazoom.jl.player.Player;
 

@@ -1,4 +1,4 @@
-package com.capgemini.starterkit.javafx;
+package com.starterkit.javafx;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -39,18 +39,16 @@ public class Startup extends Application {
 		 * Load screen from FXML file with specific language bundle (derived
 		 * from default locale).
 		 */
-		Parent root = FXMLLoader.load(
-				getClass().getResource("/com/capgemini/starterkit/javafx/view/person-search.fxml"), //
-				ResourceBundle.getBundle("com/capgemini/starterkit/javafx/bundle/base"));
+		Parent root = FXMLLoader.load(getClass().getResource("/com/starterkit/javafx/view/person-search.fxml"), //
+				ResourceBundle.getBundle("com/starterkit/javafx/bundle/base"));
 
 		Scene scene = new Scene(root);
 
 		/*
 		 * Set the style sheet(s) for application.
 		 */
-		scene.getStylesheets()
-				.add(getClass().getResource("/com/capgemini/starterkit/javafx/css/standard.css").toExternalForm());
-		// scene.getStylesheets().add(getClass().getResource("/com/capgemini/starterkit/javafx/css/alternative.css").toExternalForm());
+		scene.getStylesheets().add(getClass().getResource("/com/starterkit/javafx/css/standard.css").toExternalForm());
+		// scene.getStylesheets().add(getClass().getResource("/com/starterkit/javafx/css/alternative.css").toExternalForm());
 
 		primaryStage.setScene(scene);
 

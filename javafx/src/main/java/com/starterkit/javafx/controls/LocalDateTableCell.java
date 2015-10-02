@@ -1,4 +1,4 @@
-package com.capgemini.starterkit.javafx.controls;
+package com.starterkit.javafx.controls;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

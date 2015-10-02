@@ -1,4 +1,4 @@
-package com.capgemini.starterkit.javafx.dataprovider.impl;
+package com.starterkit.javafx.dataprovider.impl;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -7,9 +7,9 @@ import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
-import com.capgemini.starterkit.javafx.dataprovider.DataProvider;
-import com.capgemini.starterkit.javafx.dataprovider.data.PersonVO;
-import com.capgemini.starterkit.javafx.dataprovider.data.SexVO;
+import com.starterkit.javafx.dataprovider.DataProvider;
+import com.starterkit.javafx.dataprovider.data.PersonVO;
+import com.starterkit.javafx.dataprovider.data.SexVO;
 
 /**
  * Provides data. Data is stored locally in this object. Additionally a call

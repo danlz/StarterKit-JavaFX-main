@@ -1,6 +1,6 @@
-package com.capgemini.starterkit.javafx.model;
+package com.starterkit.javafx.model;
 
-import com.capgemini.starterkit.javafx.dataprovider.data.SexVO;
+import com.starterkit.javafx.dataprovider.data.SexVO;
 
 /**
  * Sex values used in GUI.
