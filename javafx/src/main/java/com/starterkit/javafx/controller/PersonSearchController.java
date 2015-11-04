@@ -26,6 +26,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -53,6 +54,8 @@ public class PersonSearchController {
 	private static final Logger LOG = Logger.getLogger(PersonSearchController.class);
 
 	/**
+	 * Resource bundle loaded with this controller. JavaFX injects a resource
+	 * bundle specified in {@link FXMLLoader#load(URL, ResourceBundle)} call.
 	 * <p>
 	 * NOTE: The variable name must be {@code resources}.
 	 * </p>
@@ -61,6 +64,8 @@ public class PersonSearchController {
 	private ResourceBundle resources;
 
 	/**
+	 * URL of the loaded FXML file. JavaFX injects an URL specified in
+	 * {@link FXMLLoader#load(URL, ResourceBundle)} call.
 	 * <p>
 	 * NOTE: The variable name must be {@code location}.
 	 * </p>
@@ -68,6 +73,10 @@ public class PersonSearchController {
 	@FXML
 	private URL location;
 
+	/**
+	 * JavaFX injects an object defined in FXML with the same "fx:id" as the
+	 * variable name.
+	 */
 	@FXML
 	private TextField nameField;
 
@@ -106,7 +115,7 @@ public class PersonSearchController {
 	}
 
 	/**
-	 * The JavaFX runtime calls this method after the FXML file loaded.
+	 * The JavaFX runtime calls this method after loading the FXML file.
 	 * <p>
 	 * The @FXML annotated fields are initialized at this point.
 	 * </p>
@@ -223,7 +232,8 @@ public class PersonSearchController {
 				.setCellFactory(param -> new LocalDateTableCell<PersonVO>(DateTimeFormatter.ofPattern("dd MMMM yyyy")));
 
 		/*
-		 * Define how the values in columns are sorted.
+		 * Define how the values in columns are sorted. By the default the
+		 * values are sorted lexicographically.
 		 */
 		birthDateColumn.setComparator(new Comparator<LocalDate>() {
 
@@ -234,7 +244,7 @@ public class PersonSearchController {
 		});
 
 		/*
-		 * Show specific text for an empty table.
+		 * Show specific text for an empty table. This can also be done in FXML.
 		 */
 		resultTable.setPlaceholder(new Label(resources.getString("table.emptyText")));
 
@@ -310,7 +320,7 @@ public class PersonSearchController {
 		model.setResult(new ArrayList<PersonVO>(result));
 
 		/*
-		 * Reset sorting in table.
+		 * Reset sorting in the result table.
 		 */
 		resultTable.getSortOrder().clear();
 	}
@@ -344,6 +354,10 @@ public class PersonSearchController {
 						model.getName(), //
 						model.getSex().toSexVO());
 
+				/*
+				 * Value returned from this method is stored as a result of task
+				 * execution.
+				 */
 				return result;
 			}
 
@@ -355,6 +369,9 @@ public class PersonSearchController {
 			protected void succeeded() {
 				LOG.debug("succeeded() called");
 
+				/*
+				 * Get result of the task execution.
+				 */
 				Collection<PersonVO> result = getValue();
 
 				/*
@@ -363,7 +380,7 @@ public class PersonSearchController {
 				model.setResult(new ArrayList<PersonVO>(result));
 
 				/*
-				 * Reset sorting in table.
+				 * Reset sorting in the result table.
 				 */
 				resultTable.getSortOrder().clear();
 			}
@@ -371,7 +388,8 @@ public class PersonSearchController {
 
 		/*
 		 * Start the background task. In real life projects some framework
-		 * manages background tasks.
+		 * manages background tasks. You should never create a thread on your
+		 * own.
 		 */
 		new Thread(backgroundTask).start();
 	}
@@ -424,7 +442,7 @@ public class PersonSearchController {
 						model.setResult(new ArrayList<PersonVO>(result));
 
 						/*
-						 * Reset sorting in table.
+						 * Reset sorting in the result table.
 						 */
 						resultTable.getSortOrder().clear();
 					}
@@ -434,7 +452,7 @@ public class PersonSearchController {
 
 		/*
 		 * Start the background task. In real life projects some framework
-		 * manages threads.
+		 * manages threads. You should never create a thread on your own.
 		 */
 		new Thread(backgroundTask).start();
 	}
