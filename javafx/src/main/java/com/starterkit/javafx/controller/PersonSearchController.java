@@ -355,10 +355,12 @@ public class PersonSearchController {
 			protected void succeeded() {
 				LOG.debug("succeeded() called");
 
+				Collection<PersonVO> result = getValue();
+
 				/*
 				 * Copy the result to model.
 				 */
-				model.setResult(new ArrayList<PersonVO>(getValue()));
+				model.setResult(new ArrayList<PersonVO>(result));
 
 				/*
 				 * Reset sorting in table.
