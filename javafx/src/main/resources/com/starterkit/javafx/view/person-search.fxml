@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?scenebuilder-preview-i18n-resource ../bundle/bundle.properties?>
+<?scenebuilder-preview-i18n-resource ../bundle/base.properties?>
 <?scenebuilder-stylesheet ../css/standard.css?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
