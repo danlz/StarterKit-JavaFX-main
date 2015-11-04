@@ -27,6 +27,9 @@
   </GridPane>
   <Button fx:id="searchButton" defaultButton="true" layoutX="14.0" layoutY="141.0" mnemonicParsing="false" onAction="#searchButtonAction" text="%button.search" />
   <TableView fx:id="resultTable" layoutX="14.0" layoutY="186.0" prefHeight="200.0" prefWidth="474.0">
+    <placeholder>
+      <Label text="%table.emptyText" />
+    </placeholder>
     <columns>
       <TableColumn fx:id="nameColumn" minWidth="195.0" prefWidth="195.0" text="%column.name" />
       <TableColumn fx:id="sexColumn" minWidth="90.0" prefWidth="90" text="%column.sex" />
