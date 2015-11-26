@@ -36,11 +36,14 @@ public class SpeakerImpl implements Speaker {
 
 			URL url = new URL(urlStr);
 			URLConnection urlConnection = url.openConnection();
+
 			/*
 			 * Make Google think we are a web browser :)
 			 */
 			urlConnection.addRequestProperty("User-Agent",
-					"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0");
+					"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0");
+
+			LOG.debug("Returned Content-Type: " + urlConnection.getContentType());
 
 			player = new Player(urlConnection.getInputStream());
 			player.play();
