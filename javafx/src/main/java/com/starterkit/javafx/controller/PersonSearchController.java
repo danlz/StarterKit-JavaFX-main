@@ -264,6 +264,11 @@ public class PersonSearchController {
 						speaker.say(newValue.getName());
 						return null;
 					}
+
+					@Override
+					protected void failed() {
+						LOG.error("Could not say name: " + newValue.getName(), getException());
+					}
 				};
 				new Thread(backgroundTask).start();
 			}

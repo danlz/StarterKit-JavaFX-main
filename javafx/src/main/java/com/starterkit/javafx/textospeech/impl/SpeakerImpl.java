@@ -45,7 +45,10 @@ public class SpeakerImpl implements Speaker {
 			urlConnection.addRequestProperty("User-Agent",
 					"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0");
 
-			LOG.debug("Returned Content-Type: " + urlConnection.getContentType());
+			String contentType = urlConnection.getContentType();
+			if (!"audio/mpeg".equals(contentType)) {
+				throw new Exception("Invalid Content-Type returned: " + contentType);
+			}
 
 			player = new Player(urlConnection.getInputStream());
 			player.play();
