@@ -15,6 +15,8 @@ import javazoom.jl.player.Player;
  * Uses Google Translate to transform text to speech.
  * <p>
  * This class calls Google server and plays the MP3 from returned stream.
+ * Unfortunately sometimes Google detects that we are not a real web browser and
+ * returns an error page instead of a MP3 stream.
  * </p>
  *
  * @author Leszek
