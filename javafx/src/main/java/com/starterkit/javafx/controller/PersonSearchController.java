@@ -257,20 +257,22 @@ public class PersonSearchController {
 			public void changed(ObservableValue<? extends PersonVO> observable, PersonVO oldValue, PersonVO newValue) {
 				LOG.debug(newValue + " selected");
 
-				Task<Void> backgroundTask = new Task<Void>() {
+				if (newValue != null) {
+					Task<Void> backgroundTask = new Task<Void>() {
 
-					@Override
-					protected Void call() throws Exception {
-						speaker.say(newValue.getName());
-						return null;
-					}
+						@Override
+						protected Void call() throws Exception {
+							speaker.say(newValue.getName());
+							return null;
+						}
 
-					@Override
-					protected void failed() {
-						LOG.error("Could not say name: " + newValue.getName(), getException());
-					}
-				};
-				new Thread(backgroundTask).start();
+						@Override
+						protected void failed() {
+							LOG.error("Could not say name: " + newValue.getName(), getException());
+						}
+					};
+					new Thread(backgroundTask).start();
+				}
 			}
 		});
 	}
