@@ -25,7 +25,7 @@ public class SpeakerImpl implements Speaker {
 
 	private static final Logger LOG = Logger.getLogger(SpeakerImpl.class);
 
-	private static final String TTS_SERVICE_URL = "http://translate.google.com/translate_tts?client=t&";
+	private static final String TTS_SERVICE_URL = "https://translate.google.com/translate_tts?client=tw-ob&";
 
 	@Override
 	public void say(String text) {
