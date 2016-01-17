@@ -1,4 +1,4 @@
-package com.starterkit.javafx.textospeech.impl;
+package com.starterkit.javafx.texttospeech.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.Locale;
 
 import org.apache.log4j.Logger;
 
-import com.starterkit.javafx.textospeech.Speaker;
+import com.starterkit.javafx.texttospeech.Speaker;
 
 import javafx.scene.media.AudioClip;
 
