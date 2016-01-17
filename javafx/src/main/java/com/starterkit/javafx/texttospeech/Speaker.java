@@ -1,6 +1,6 @@
-package com.starterkit.javafx.textospeech;
+package com.starterkit.javafx.texttospeech;
 
-import com.starterkit.javafx.textospeech.impl.SpeakerImpl;
+import com.starterkit.javafx.texttospeech.impl.SpeakerImpl;
 
 /**
  * Transforms text to speech.

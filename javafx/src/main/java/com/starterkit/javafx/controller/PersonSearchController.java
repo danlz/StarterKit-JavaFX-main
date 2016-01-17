@@ -16,7 +16,7 @@ import com.starterkit.javafx.dataprovider.data.PersonVO;
 import com.starterkit.javafx.dataprovider.data.SexVO;
 import com.starterkit.javafx.model.PersonSearch;
 import com.starterkit.javafx.model.Sex;
-import com.starterkit.javafx.textospeech.Speaker;
+import com.starterkit.javafx.texttospeech.Speaker;
 
 import javafx.application.Platform;
 import javafx.beans.property.ReadOnlyObjectWrapper;
