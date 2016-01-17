@@ -21,7 +21,7 @@ import javafx.scene.media.AudioClip;
  * <p>
  * This class calls Google server and plays the MP3 from returned stream.
  * Unfortunately sometimes Google detects that we are not a real web browser and
- * returns an error page instead of a MP3 stream.
+ * returns an error page or CAPTCHA page instead of a MP3 stream.
  * </p>
  * <p>
  * From time to time Google changes the TTS API. If this class stops working see
@@ -46,13 +46,15 @@ public class SpeakerImpl implements Speaker {
 
 	private static final String TEXT_ENCODING = "UTF-8";
 
-	private static final String TTS_SERVICE_URL = "https://translate.google.com/translate_tts?" //
-			+ "ie=" + TEXT_ENCODING + "&" //
-			+ "total=1&" //
-			+ "idx=0&" //
-			+ "prev=input&" //
-			+ "ttsspeed=0.35&" //
-			+ "client=tw-ob&";
+	private static final String TTS_SERVICE_URL = "https://translate.google.com/translate_tts" //
+			+ "?ie=" + TEXT_ENCODING //
+			+ "&total=1" //
+			+ "&idx=0" //
+			+ "&prev=input" //
+			+ "&ttsspeed=0.35" //
+			+ "&client=tw-ob";
+
+	private final TokenGenerator tokenGenerator = new TokenGenerator();
 
 	@Override
 	public void say(String text) {
@@ -61,8 +63,11 @@ public class SpeakerImpl implements Speaker {
 
 		InputStream is = null;
 		try {
-			String urlStr = TTS_SERVICE_URL + "tl=" + language + "&textlen=" + text.length() + "&q="
-					+ URLEncoder.encode(text, TEXT_ENCODING);
+			String urlStr = TTS_SERVICE_URL //
+					+ "&tk=" + tokenGenerator.generateToken(text) //
+					+ "&tl=" + language //
+					+ "&textlen=" + text.length() //
+					+ "&q=" + URLEncoder.encode(text, TEXT_ENCODING);
 
 			LOG.debug("TTS query URL: " + urlStr);
 
