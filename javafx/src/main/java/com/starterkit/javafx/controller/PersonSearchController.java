@@ -175,6 +175,7 @@ public class PersonSearchController {
 					protected void updateItem(Sex item, boolean empty) {
 						super.updateItem(item, empty);
 						if (empty) {
+							setText(null);
 							return;
 						}
 						String text = getInternationalizedText(item);
@@ -215,8 +216,8 @@ public class PersonSearchController {
 				new Callback<TableColumn.CellDataFeatures<PersonVO, String>, ObservableValue<String>>() {
 
 					@Override
-					public ObservableValue<String> call(CellDataFeatures<PersonVO, String> param) {
-						SexVO sex = param.getValue().getSex();
+					public ObservableValue<String> call(CellDataFeatures<PersonVO, String> cellData) {
+						SexVO sex = cellData.getValue().getSex();
 						String text = getInternationalizedText(Sex.fromSexVO(sex));
 						return new ReadOnlyStringWrapper(text);
 					}
